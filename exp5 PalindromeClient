@@ -1,0 +1,18 @@
+package rmi; 
+import java.rmi.*; 
+import java.rmi.registry.*; 
+public class PalindromeClient { 
+public static void main(String[] args) throws Exception{ 
+PalindromeInterface obj1 = (PalindromeInterface)Naming.lookup("rmi://localhost:5000/XYZ"); 
+  String ans1 = obj1.palindromeCheck("HELLO"); 
+  String ans2 = obj1.palindromeCheck("RACECAR"); 
+  String ans3 = obj1.palindromeCheck("MADAM"); 
+  String ans4 = obj1.palindromeCheck("NAYAN"); 
+  String ans5 = obj1.palindromeCheck("ANCHAL"); 
+  System.out.println(ans1); 
+  System.out.println(ans2); 
+  System.out.println(ans3); 
+  System.out.println(ans4); 
+  System.out.println(ans5); 
+  } 
+  }
